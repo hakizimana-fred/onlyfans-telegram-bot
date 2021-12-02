@@ -3,7 +3,7 @@ import telegram
 import json
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
-telegram_bot_token = '2133115792:AAH0oPMpddaOO1ixnwD4bli8lFq14GrBBZw'
+telegram_bot_token = ''
 
 updater = Updater(token=telegram_bot_token, use_context=True)
 dispatcher = updater.dispatcher
@@ -22,7 +22,7 @@ def getBlondes(update, context):
     subreddit = reddit.subreddit('OnlyFansBlonde')
     for submission in subreddit.top(limit=5):
         chat_id = update.effective_chat.id
-        context.bot.send_photo(chat_id=671798413, photo=f'{submission.url}')
+        context.bot.send_photo(chat_id='', photo=f'{submission.url}')
 
 
 def getRedHeads(update, context):
@@ -38,7 +38,7 @@ def getRedHeads(update, context):
     subreddit = reddit.subreddit('OnlyFansReds')
     for submission in subreddit.top(limit=5):
         chat_id = update.effective_chat.id
-        context.bot.send_photo(chat_id=671798413, photo=f'{submission.url}')
+        context.bot.send_photo(chat_id='', photo=f'{submission.url}')
 
 
 
@@ -55,7 +55,7 @@ def getBrunettes(update, context):
     subreddit = reddit.subreddit('OnlyFansBrunette')
     for submission in subreddit.top(limit=5):
         chat_id = update.effective_chat.id
-        context.bot.send_photo(chat_id=671798413, photo=f'{submission.url}')
+        context.bot.send_photo(chat_id='', photo=f'{submission.url}')
 
 
 dispatcher.add_handler(CommandHandler("getblondes", getBlondes))
